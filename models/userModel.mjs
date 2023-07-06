@@ -14,9 +14,8 @@ const userSchema = new mongoose.Schema({
         type: Number,
     },
     address:{
-        type: String,
-        required: [true, "Email is a required field"]
+        type: String
     }
 })
 
-export default mongoose.model.myUser || mongoose.model("myUser",userSchema)
+export default mongoose.models.myUser || mongoose.model("myUser",userSchema)
