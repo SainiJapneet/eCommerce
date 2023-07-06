@@ -6,6 +6,7 @@ import Products from '../models/productModel.mjs';
 
 const route = express.Router();
 
+
 route.post('/register', async (request, response) => {
   try {
     const hashedPassword = await bcrypt.hash(request.body.password, 10);
@@ -15,18 +16,18 @@ route.post('/register', async (request, response) => {
       email: request.body.email,
       password: hashedPassword,
       age: request.body.age,
-      address: request.body.address
+      address: request.body.address,
     });
 
     const result = await user.save();
     response.status(200).send({
       message: "Created new User",
-      result
+      result,
     });
   } catch (error) {
     response.status(500).send({
       message: "User not created",
-      error
+      error,
     });
   }
 });

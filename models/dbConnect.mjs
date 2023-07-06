@@ -7,6 +7,10 @@ async function dbConnect(){
     mongoose.connect(connectionString, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        writeConcern: {
+            w: "majority",
+            wtimeout: 0,
+          },
     }).then(()=>{
         console.log("Connected to DB")
     }).catch((error)=>{
