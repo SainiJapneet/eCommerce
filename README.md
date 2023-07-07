@@ -14,7 +14,7 @@ Please follow these steps to install and run the API:
 
 1. Clone this repository: `git clone https://github.com/[username]/[repository].git`
 2. Navigate to the project directory: `cd [repository]`
-3. Install the dependencies: `npm install`
+3. Install the dependencies: `npm install bcrypt mongoose jsonwebtoken dotenv express`
 
 ## Configuration
 
