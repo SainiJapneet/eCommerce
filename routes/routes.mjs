@@ -114,7 +114,7 @@ route.delete("/deleteUser/:id",async (request,response)=>{
     const id = request.params.id;
     const userDelete = await User.findByIdAndRemove(id);
     response.send(userDelete);
-    console.log("Deleted Employee");
+    console.log("Deleted User");
     console.log(userDelete);
   }catch(error){
     response.status(500).json({message : error.message});
