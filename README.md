@@ -34,7 +34,7 @@ Before running the API, you need to set up the environment variables:
 To start the API server, run the following command:
 
 ```
-npm start
+node server.mjs
 ```
 
 The API server will start running on port 8080 by default. You can access the API endpoints using a tool like cURL, Postman, or any HTTP client.
